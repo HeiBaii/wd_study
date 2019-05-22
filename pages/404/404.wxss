@@ -1,0 +1,25 @@
+/* pages/404/404.wxss */
+page {
+  background-color: #f3f7fd;
+}
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.bg image {
+  padding-top: 50%;
+  width: 645rpx;
+  height: 348rpx;
+}
+.bg view {
+  width: 240rpx;
+  height: 60rpx;
+  background-color: #4573ff;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}

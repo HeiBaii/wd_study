@@ -1,0 +1,121 @@
+/* pages/additionalClass/additionalDetail/additionalDetail.wxss */
+page {
+  background-color: #f3f4f9;
+}
+.detail_box {
+  background-color: #fff;
+  height: 580rpx;
+  position: relative;
+}
+.state_img {
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  right: 28rpx;
+  top: 28rpx;
+  z-index: 99;
+}
+.state_text {
+  position: absolute;
+  right: 28rpx;
+  top: 46rpx;
+  z-index: 99;
+  font-size: 28rpx;
+  color: #4c78fd;
+}
+.applicant {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 28rpx;
+  border-bottom: 0.5rpx solid #eee;
+}
+.head_portrait {
+  width: 68rpx;
+  height: 68rpx;
+}
+.name {
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  color: #4c515d;
+  font-weight: bold;
+}
+.content_text {
+  padding: 30rpx 28rpx;
+}
+.content_text text {
+  display: block;
+  font-size: 28rpx;
+  color: #4c515d;
+  line-height: 50rpx;
+}
+/* 审核进度 */
+.progress {
+  margin-top: 16rpx;
+  background-color: #fff;
+  padding: 30rpx 28rpx;
+}
+.pro_text {
+  font-size: 32rpx;
+  color: #4c515d;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 40rpx;
+}
+.con_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40rpx;
+  position: relative;
+}
+.con_line::after {
+  content: "";
+  background-color: #eee;
+  width: 1rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 68rpx;
+  left: 34rpx;
+}
+.con {
+  display: flex;
+  align-items: center;
+}
+.con_img{
+  width: 68rpx;
+  height: 68rpx;
+}
+.con_name {
+  font-size: 28rpx;
+  color: #4c515d;
+  padding-left: 20rpx;
+}
+.apply_enter {
+  color: #4c78fd;
+}
+.apply_success {
+  color: #00c834;
+}
+.apply_fail {
+  color: #f15a5a;
+}
+.con_state {
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.con_time {
+  font-size: 24rpx;
+  color: #8890a4;
+}
+.auditor {
+  padding-bottom: 0;
+}
+.con_reason {
+  padding-left: 88rpx;
+  font-size: 28rpx;
+  color: #4c515d;
+  padding-bottom: 30rpx;
+}
+.reason_title { 
+  color: #8890a4;
+}

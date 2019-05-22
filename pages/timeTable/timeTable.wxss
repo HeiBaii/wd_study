@@ -1,0 +1,235 @@
+/* pages/timeTable/timeTable.wxss */
+page{
+  background-color: #f3f4f9;
+}
+.date_wrap{
+  background-color: #fff;
+}
+.date-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.date-now text {
+  padding: 10rpx 35rpx;
+  font-size: 28rpx;
+  color: #4c515d;
+  border-left: 1px solid #d4d9de;
+}
+.date-show{
+  position: relative;
+  width: 250rpx;
+  font-size: 34rpx;
+  color: #4c515d;
+  font-weight: 600;
+  text-align: left;
+  padding: 35rpx 0 35rpx 35rpx;
+}
+.header>view{
+  display: inline-block;
+  width: 14.285%;
+  color: #8890a4;
+  font-size: 24rpx;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 28rpx 0;
+}
+.weekMark{
+  position: relative;
+}
+.weekMark view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #4573ff;
+}
+.date-box{
+  font-size: 0;
+  padding: 10rpx 0;
+}
+.date-box>view{
+  position: relative;
+  display: inline-block;
+  width: 14.285%;
+  color: #4c515d;
+  font-size: 36rpx;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15rpx 0;
+}
+.date-head{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #4c515d;
+}
+.nowDay .date-head{
+  color: #4573ff;
+}
+/* 点击后 */
+.clickDay .date-head{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #4573ff;
+  margin: 0 auto;
+}
+.curriculum{
+  position: absolute;
+  left: 50%;
+  margin-left: -4rpx;
+  top: 65rpx;
+}
+.curriculum view{
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  float: left;
+  margin-right: 6rpx;
+}
+
+/* 课程详情 */
+.content_box{
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.content_box view:last-child{
+  border: none;
+}
+.content{
+  height: 200rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.content_left{
+  display: flex;
+}
+.content_time text{
+  display: block;
+}
+.content_time text:first-child{
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #4c515d;
+}
+.content_time text:last-child{
+  font-size: 28rpx;
+  color: #8890a4;
+}
+.content_type{
+  font-size: 20rpx;
+  color: #fff;
+  display: block;
+  width: 42rpx;
+  height: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  border-radius: 14rpx;
+  margin-left: 20rpx;
+  margin-top: 6rpx;
+}
+.content_detail text{
+  display: block;
+  margin-left: 20rpx;
+}
+.content_detail text:first-child{
+  font-size: 32rpx;
+  color: #4c515d;
+  font-weight: bold;
+}
+.content_detail text:nth-child(2){
+  font-size: 28rpx;
+  color: #8890a4;
+  padding: 10rpx 0 0 30rpx;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyOUQyRTc5ODU0MkExMUU5OUYwMTlGMDVGRDhGRTNERCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyOUQyRTc5OTU0MkExMUU5OUYwMTlGMDVGRDhGRTNERCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjI5RDJFNzk2NTQyQTExRTk5RjAxOUYwNUZEOEZFM0REIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI5RDJFNzk3NTQyQTExRTk5RjAxOUYwNUZEOEZFM0REIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rnm2GAAAAjVJREFUeNq0lUtIVVEUhr3aIEJTaCKF0aCHTRxWOMlHDWoUpmkvqG4GDaJRREXQKEGoCIMiesxShKteiITISnAQjgonRVAQFwQ10EpQyk7/gu/C5rDPvsdBCz7WPuusvdZ+rp2Joqjsf8oa9+PZwBufT4voRG/G9k28FoNiLN7hWFezP0FM6sV90eT5txXOibfivPjoC1KeEHyvmCT4nLgqGsRaaMA2h88kfVIlsJHnRZUYYqQ9YkoswxQ2+5fDN0/fYIKMeCqqxbBoFwuBZbR/HQykmr6ZUIJWsYepnxLFI7aNkS5ADlsZPqfFLH1bQwmOoPvED9rbWeM2sR7asO3Ax3zvxGJ4E7Sg847N1rpGjIqNMIrtpuP3PBbDm6AO7R65feismIYstv2O36dYDG+CFfS6Ehc0cg5FUSpiMbwJvjibWpRX6EeiVmwSj7G9jB1vk6+hBBPoA47NLtS8OMjyFGjP8889gSbjoQQj6E5n+ra2uzjrP8Hau511NzmJziUWO5bDCtlOZvEC+2dxOLAnTZSPQqkZ/BG3aF+L38qA3EDfJUawFtkGzohGcTRF8EMUuu/iQZpit8joTXq5UElS6dzg6+JX2nL9RLzjSPYFEtwWW8R78XA178FfCpjN5oQ44/HpEt1iicK4spoExXJxkba9bM3Ov0bnsl0SH1K9yQkbbrf6MsXsuPgt+iknlvhe6kc/Qa6IDeIsj5C7TxdKdS5PkSBirbu5SAXa2aR1d+WfAAMA769+4RP+oG0AAAAASUVORK5CYII=") no-repeat left 18rpx;
+background-size:24rpx 24rpx;
+}
+.content_detail text:last-child{
+  font-size: 28rpx;
+  color: #8890a4;
+  padding-left: 30rpx;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMkQ3RjRDRjU0MkExMUU5ODgzQ0Y2NzM1NzEyOUY4NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMkQ3RjREMDU0MkExMUU5ODgzQ0Y2NzM1NzEyOUY4NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMyRDdGNENENTQyQTExRTk4ODNDRjY3MzU3MTI5Rjg3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMyRDdGNENFNTQyQTExRTk4ODNDRjY3MzU3MTI5Rjg3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ebF+TgAAAYdJREFUeNq0ljtIA0EQhj2xU2MKtUgZiNrZKNhJglidFgaCrenFRx0RjGglithqLT6aaMAu2FkINhaxsQ2ITXw0Wpz/wH9wHLm9neANfAwMM/Pv7u0O53ie15Ok9YUD5xf34dAw2AQuGGOsCWrgGLwHk5dLs2aBkBXBKRgKxSfJGiiD66gGvTHNL9n8FhTAICkwlmJOUSswAs6AA7bBAmiAL9JgbIs5kjuqEVjl6upgx7DLXXDD3HWNwCL9gcVFOaR3NQIT9I8WAn7OuPYj25r/kH40Ak36KQuBafpXjUCNfsNCwM+pawROwAevYsXQvMIcyT3SCLzxhcr5VnkV86Cf5LnLKnPKrImfRQGT51/iI3IjruEnWOl2VIhdgSzYB8/gF3yDJz6yrKm5mBMc1x0maVcWnKiddpDjqto8XxvarMnFfQN5jQ8grVy0zKIlTtkZ8BK1gz02vwMZTkobMqxJs0fkEc3Ry7VrKXbQYo3YvEkgFSjQml8z8N/DzmiJCzhJ/7b8CTAAs+dcpXGFdTMAAAAASUVORK5CYII=") no-repeat left;
+  background-size:24rpx 24rpx;
+}
+.go_datail{
+  width: 24rpx;
+  height: 24rpx;
+  padding-right: 20rpx;
+}
+
+/* 无课程情况 */
+.no_content{
+  padding-top: 90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no_content text{
+  font-size: 32rpx;
+  color: #4c515d;
+  font-weight: bold;
+  line-height: 70rpx;
+}
+.no_content view{
+  color: #8890a4;
+  font-size: 28rpx;
+}
+/* 课程详情弹框 */
+.detail_modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 9999;
+}
+.modal_box{
+  width: 600rpx;
+  height: 800rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300rpx;
+  margin-top: -400rpx;
+}
+.modal_title{
+  background: #4573ff;
+  width: 540rpx;
+  height: 100rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.modal_title image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.modal_con{
+  padding:30rpx;
+  font-size: 28rpx;
+  color: #4c515d;
+  line-height: 50rpx;
+}
+.modal_con view{
+  display: flex;
+}
+.modal_con view text:first-child{
+  color: #8890a4;
+  width: 30%;
+}

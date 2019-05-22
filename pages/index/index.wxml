@@ -1,0 +1,85 @@
+<!--pages/index/index.wxml-->
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='home_page' style='margin-top: {{height}}px'>
+  <view class='banner'>
+    <view class='banner_bg'>
+      <swiper
+        class='swiper_box'
+        autoplay="true"
+        indicator-dots="true"
+        interval="2000"
+        circular="true"
+      >
+        <block>
+          <swiper-item class="images_box">
+            <image src="/images/banner1.png" class="slide_image"/>
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item class="images_box">
+            <image src="/images/banner1.png" class="slide_image"/>
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item class="images_box">
+            <image src="/images/banner1.png" class="slide_image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class='menu_box'>
+    <view hover-class='none' class='menu_item' bindtap='scanCode'>
+      <image src='/images/index_icon/menu01.png'></image>
+      <text>扫一扫</text>
+    </view>
+    <navigator hover-class='none' class='menu_item' url="/pages/qrcode/qrcode">
+      <image src='/images/index_icon/menu02.png'></image>
+      <text>二维码</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item' url='/pages/timeTable/timeTable'>
+      <image src='/images/index_icon/menu03.png'></image>
+      <text>我的课表</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item'>
+      <image src='/images/index_icon/menu04.png'></image>
+      <text>补课申请</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item'>
+      <image src='/images/index_icon/menu05.png'></image>
+      <text>转班申请</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item' url='/pages/additionalClass/additionalList/additionalList'>
+      <image src='/images/index_icon/menu06.png'></image>
+      <text>附加课申请</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item'>
+      <image src='/images/index_icon/menu07.png'></image>
+      <text>上课预约</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item'>
+      <image src='/images/index_icon/menu08.png'></image>
+      <text>辅导预约</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item' url='/pages/leaveAppply/leaveList/leaveList'>
+      <image src='/images/index_icon/menu09.png'></image>
+      <text>请假申请</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item'>
+      <image src='/images/index_icon/menu10.png'></image>
+      <text>专业确认</text>
+    </navigator>
+    <navigator hover-class='none' class='menu_item' url="/pages/codeRecord/codeRecord">
+      <image src='/images/index_icon/menu11.png'></image>
+      <text>扫码记录</text>
+    </navigator>
+  </view>
+  <view class='more_box'>
+    <view class='index_more'>
+      <image class='app_icon' src='/images/app_icon.png'></image>
+      <text class='more_text'>更多功能请下载文都伴学APP</text>
+      <navigator class='go_more'>下载</navigator>
+    </view>
+  </view>
+</view>

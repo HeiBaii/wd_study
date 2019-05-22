@@ -1,0 +1,5 @@
+<!--pages/404/404.wxml-->
+<view class='bg'>
+  <image src='../../images/404.png'></image>
+  <view bindtap='goIndex'>返回首页</view>
+</view>

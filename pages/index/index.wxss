@@ -1,0 +1,103 @@
+/* pages/index/index.wxss */
+/* banner */
+.swiper_box .wx-swiper-dots.wx-swiper-dots-horizontal{
+  z-index: 999;
+}
+.swiper_box .wx-swiper-dot{
+  width: 20rpx;
+  display: inline-flex;
+  height: 4rpx;
+  justify-content:space-between;
+}
+.swiper_box .wx-swiper-dot::before{
+  content: '';
+  flex-grow: 1; 
+  background: #999;
+  border-radius: 2rpx
+}
+.swiper_box .wx-swiper-dot-active::before{
+  background:#4573ff;   
+}
+.banner{
+  height: 390rpx;
+}
+.banner_bg{
+  width: 100%;
+  height: 250rpx;
+  background-color: #4573ff;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  position: relative;
+}
+.swiper_box {
+  width: 94%;
+  height: 370rpx;
+  position: absolute;
+  left: 3%;
+  top: 30rpx;
+}
+.images_box{
+  width: 100%;
+}
+.slide_image{
+  width: 100%;
+  height: 320rpx;
+  border-radius: 20rpx;
+}
+/* 菜单 */
+.menu_box {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.menu_item{
+  width: 25%;
+  text-align: center;
+  margin-top: 60rpx;
+}
+.menu_item image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.menu_item text{
+  display: block;
+  font-size: 26rpx;
+  color: #4c515d;
+}
+/* 下载 */
+.more_box{
+  width: 100%;
+  height: 90rpx;
+  background-color: #ecf1ff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.index_more{
+  width: 90%;
+  padding-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 90rpx;
+}
+.index_more .app_icon{
+  width: 64rpx;
+  height: 64rpx;
+  padding-top: 13rpx;
+}
+.index_more .more_text{
+  font-size: 26rpx;
+  color: #4573ff;
+  padding-right: 120rpx;
+}
+.index_more .go_more{
+  width: 108rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-top: 15rpx;
+  border: 1px solid #a9bfff;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #4573ff;
+}

@@ -1,0 +1,72 @@
+/* component/data/data.wxss */
+.date-show{
+  position: relative;
+  width: 250rpx;
+  font-family: PingFang-SC-Regular;
+  font-size: 34rpx;
+  color: #4c515d;
+  font-weight: 600;
+  text-align: left;
+  margin: 35rpx 0 35rpx 35rpx;
+}
+.header>view{
+  display: inline-block;
+  width: 14.285%;
+  color: #8890a4;
+  font-size: 24rpx;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 28rpx 0;
+}
+.weekMark{
+  position: relative;
+}
+.weekMark view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #4573ff;
+}
+.date-box{
+  font-size: 0;
+  padding: 10rpx 0;
+}
+.date-box>view{
+  position: relative;
+  display: inline-block;
+  width: 14.285%;
+  color: #4c515d;
+  font-size: 36rpx;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15rpx 0;
+}
+.date-head{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #4c515d;
+}
+.nowDay .date-head{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #4573ff;
+  margin: 0 auto;
+}
+.curriculum{
+  position: absolute;
+  left: 50%;
+  margin-left: -4rpx;
+  top: 65rpx;
+}
+.curriculum view{
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  float: left;
+  margin-right: 6rpx;
+}

@@ -1,0 +1,24 @@
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='bg' style='margin-top: {{height}}px'>
+  <view class='item' wx:for="{{categoryList}}" wx:key="{{index}}">
+    <view class="item_category" data-index="{{index}}" catchtap='changeToggle' data-id="{{item.id}}">
+      <view class="category">
+        <checkbox color='#4573ff' catchtap='checkAll' checked='{{item.checked}}' data-id='{{item.id}}' class='category_checkbox'></checkbox>
+        <text class='category_title'>科目：</text>
+        <text class='category_name'>{{item.categoryName}}</text>
+      </view>
+      <view wx:if='{{!item.selected}}' class='down'></view>
+      <view wx:if='{{item.selected}}' class='up'></view>
+    </view>
+    <view hidden="{{!item.selected}}">
+      <checkbox-group bindchange="checkboxChange" data-classTypeId='{{item.classTypeId}}' class='category_con' wx:for="{{item.classTypeList}}" wx:key="{{index}}">
+        <checkbox color='#4573ff' class='category_checkbox' value='{{item.classTypeId}}' disabled='{{item.disClickable}}' checked='{{item.checked}}'></checkbox>
+        <text class='category_title'>班课班型：</text>
+        <text class='category_name'>{{item.classTypeName}}</text>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='btn' bindtap='next'>下一步</view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/login/codeLogin/codeLogin.wxml-->
+<view class='login_container'>
+  <text class='login_title'>验证码登录</text>
+  <form class='login_form'>
+    <input class='login_userName' bindinput='bindPhoneInput' placeholder='请输入手机号' placeholder-style='color:#bec5d4;' value='{{phone}}'></input>
+    <input class='login_Password' bindinput='bindCodeInput' placeholder='请输入验证码' value='{{code}}' placeholder-style='color:#bec5d4;' password='{{prdShow}}'>
+      <view class='prd_con'>
+        <image catchtap='emptyPrd' class='prd_del' src='{{delShow?"/images/del.png":""}}'></image>
+        <button class='codeBtn' bindtap='getCode' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+      </view>
+    </input>
+    
+    <checkbox color='#4573ff' class='login_relation'>关联微信号“<text>ALLICE1233</text>”</checkbox>
+  </form>
+  <button class='login_signIn' catchtap='submit' style='background-color:{{btnColor? "#4573ff":"#cbd6e4"}}'>登录</button>
+  <view class='login_operation'>
+    <navigator hover-class='none' url='/pages/login/studentLogin/studentLogin'>学员登录</navigator>
+  </view>
+  <view class='agreement'>我已仔细阅读并同意 <navigator hover-class='none' catchtap='goAgreement' url='/pages/login/agreement/agreement'>隐私保护政策</navigator></view>
+</view>

@@ -1,0 +1,4 @@
+<!--component/slide/slide.wxml-->
+<view id="id" class = "ball" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" style="width:100%px;height:40px;">
+{{text}}
+</view>

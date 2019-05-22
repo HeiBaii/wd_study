@@ -1,0 +1,28 @@
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='qrcode_bg' style='margin-top: {{height}}px'>
+  <view class='noData_bg' wx:if="{{addadditionalList.length === 0}}">
+    <image class='noData_img' src='../../../images/no_data.png'></image>
+    <text class='noData_text'>暂无数据</text>
+  </view>
+  <view class='item_bg'>
+    <view class='item_container'>
+      <view class='subject_state'>
+        <text class='subject'>申请科目-英语</text>
+        <text class='state'style="color:#4c78fd;">申请中</text>
+        <text class='state'style="color:#00c834;" wx:if="{{item.auditStatus === '申请成功'}}">{{item.auditStatus}}</text>
+        <text class='state'style="color:#fa464a;" wx:if="{{item.auditStatus === '申请失败'}}">{{item.auditStatus}}</text>
+      </view>
+      <view class='item_con'>
+        <view class='item_text'>
+          <text>请假班级：2019年考研数学常规基础班</text>
+          <text>上课时间：2019年3月3日 09:00</text>
+          <text class='item_time'>今天 17:50</text>
+        </view>
+        <image class='go_detail' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='btn'>发起请假申请</view>
+  </view>
+</view>

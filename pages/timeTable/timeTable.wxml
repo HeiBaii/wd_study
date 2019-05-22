@@ -1,0 +1,95 @@
+<!--pages/timeTable/timeTable.wxml-->
+<!-- 引入自定义截取字段wxs脚本 -->
+<wxs src="../../wxs/subutil.wxs" module="sub"/>
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class='date_wrap' bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+    <view class='date-header'>
+      <view class='date-show'>{{year}}年{{month}}月</view>
+      <view class='date-now'>
+        <text catchtap="nowDay">今天</text>
+        <text catchtap="close">取消</text>
+      </view>
+    </view>
+      <view class='header'>
+        <view wx:for='{{date}}' wx:key='index' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}                
+          <view></view>
+        </view>
+      </view>
+      <view class='date-box'>
+        <view wx:for='{{dateArr}}' data-num="{{item.dateNum}}" catchtap='dateClick' data-clickdate="{{year}}-{{month}}-{{item.dateNum}}" wx:key='index' class='{{isToday === item.isToday ? "nowDay" : ""}} {{tapDay === item.dateNum && dateDay === item.isToday ? "clickDay" : ""}}' data-date='{{item.isToday}}'>
+          <view class='date-head'>
+            <view>{{item.dateNum}}</view>
+            <!-- 课程点 -->
+            <!-- <view class='curriculum' wx:if="{{item.dateNum}}">
+              <view style='background-color:#10d4ce;'></view>
+            </view> -->
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class='content_box' wx:if="{{timeTableContent}}">
+    <view class='content' catchtap='courseDetail' wx:for="{{timeTableArr}}" wx:key="{{index}}" data-id="{{item.id}}">
+      <view class='content_left'>
+        <view class='content_time'>
+          <text>{{sub.subFirst(item.classTime)}}</text>
+          <text>{{sub.subLast(item.classTime)}}</text>
+        </view>
+        <text class='content_type' style='background:#ffbb14;' wx:if="{{item.classType === '0'}}">1v1</text>
+        <text class='content_type' style='background:#10d4ce;' wx:if="{{item.classType === '1'}}">班</text>
+        <view class='content_detail'>
+          <text>{{item.className}}</text>
+          <text>{{item.classRoomName}}</text>
+          <text>{{item.teacherName}}</text>
+        </view>
+      </view>
+      <image class='go_datail' src='/images/go_detail.png'></image>
+    </view>
+  </view>
+  <!-- 没有数据 -->
+  <view class='no_content' wx:if="{{!timeTableContent}}">
+    <text>今日暂无课程</text>
+    <view>左右滑动切换月份</view>
+    <view>点击数字下方有点的日期</view>
+  </view>
+  <!-- 课程详情弹框 -->
+  <view class='detail_modal' wx:if="{{isDetail}}">
+    <view class='modal_box'>
+      <view class='modal_title'>
+        <text>{{detailCon.className}}</text>
+        <image src='/images/close_detail.png' catchtap='closeDetail'></image>
+      </view>
+      <view class='modal_con'>
+        <view>
+          <text>上课时间:</text>
+          <text>{{detailCon.classDate}} {{detailCon.classTime}}</text>
+        </view>
+        <view>
+          <text>科目:</text>
+          <text>{{detailCon.subjectName}}</text>
+        </view>
+        <view>
+          <text>授课形式:</text>
+          <text>{{detailCon.lessonType}}</text>
+        </view>
+        <view>
+          <text>教师:</text>
+          <text>{{detailCon.teacherName}}</text>
+        </view>
+        <view>
+          <text>教室:</text>
+          <text>{{detailCon.classRoomName}}</text>
+        </view>
+        <view>
+          <text>设备管理员:</text>
+          <text>{{detailCon.equipmentManager}}</text>
+        </view>
+        <view>
+          <text>课程模块:</text>
+          <text>{{detailCon.classCourseName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

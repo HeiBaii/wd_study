@@ -1,0 +1,18 @@
+<!--pages/info/classInfo/classInfo.wxml-->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='home_page' style='margin-top: {{height}}px'>
+  <view class='class_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_pinglun.png'></image>
+    <view class='item_con'>
+      <view class='item_text'><text class='item_red'></text>请您于2019年1月10日 10:00准时在武汉大学信息学部青四楼108室上课，科目：数学，课程模块：考研数字基础课程。</view>
+      <text class='item_time'>今天 17:50</text>
+    </view>
+  </view>
+  <view class='class_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_pinglun.png'></image>
+    <view class='item_con'>
+      <view class='item_text'><text class='item_red'></text>请您于2019年1月10日 10:00准时在武汉大学信息学部青四楼108室上课，科目：数学，课程模块：考研数字基础课程。</view>
+      <text class='item_time'>今天 17:50</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='home_page' style='margin-top: {{height}}px'>
+  <web-view style='padding-top:{{height}}px' src="https://www.wendu.com/index.php?m=content&c=index&a=show&catid=884&id=497"></web-view>
+</view>

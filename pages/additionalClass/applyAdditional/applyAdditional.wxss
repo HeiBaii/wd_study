@@ -1,0 +1,93 @@
+/* 改写checkbox */
+checkbox .wx-checkbox-input{
+  border-radius: 16px;
+  height: 18px;
+  width: 18px;
+  border: 2px solid #aebac9;
+  box-sizing: border-box;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 14px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  height: 24px;
+  width: 24px;
+  background-color: #4573ff;
+  color:white;
+  margin-top: -1rpx;
+}
+
+page {
+  background-color: #f3f4f9;
+}
+.bg {
+  margin-bottom: 170rpx;
+}
+.item_category {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28rpx;
+  line-height: 100rpx;
+}
+.category_checkbox {
+  margin-top: -8rpx;
+}
+.category {
+  display: flex;
+  align-items: center;
+}
+.category_title {
+  font-size: 30rpx;
+  color: #8890a4;
+  padding-left:10rpx;
+}
+.category_name {
+  font-size: 30rpx;
+  color: #4c515d;
+}
+.down, .up {
+  width: 15rpx;
+  height: 15rpx;
+  border-bottom: 3rpx solid #cbd0d6;
+  border-right: 3rpx solid #cbd0d6;
+}
+.down {
+  transform: rotate(45deg);
+  margin-top: -10rpx;
+}
+.up {
+  transform: rotate(-135deg);
+  margin-bottom: -10rpx;
+}
+/* 下拉样式 */
+.category_con {
+  padding: 20rpx 0 20rpx 52rpx;
+  background-color: #f8f9fd;
+}
+
+/* 页脚 */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 170rpx;
+  box-sizing: border-box;
+  padding: 20rpx 28rpx 0 28rpx;
+  background-color: #fff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.btn {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #4573ff;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 40rpx;
+}

@@ -1,0 +1,120 @@
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='qrcode_bg' style='margin-top: {{height}}px'>
+  <view class='screen' catchtap='openScreen' style='top:{{height}}px'>筛选</view>
+  <view class='month_item'>
+    <view class='month_con'>
+      <text class='item_month'>12月</text>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+    </view>
+    <view class='month_con'>
+      <text class='item_month'>12月</text>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+      <view class='item_con'>
+        <view class='item_imgBox'>
+          <image class='item_img' src='../../images/code_record.png'></image>
+        </view>
+        <view class='item_text'>
+          <view>2018年12月4日 08:25</view>
+          <text>打卡类型：上课考勤</text>
+          <text>考勤班级：广埠屯考研教学基础1班</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='blick_mask' wx:if="{{screenShow}}">
+  <view class='close_box' catchtap='closeScreen'></view>
+  <view class='screen_box'>
+    <view class='title_box'>
+      <text class='screen_title'>筛选</text>
+    </view>
+    <view class='start_end'>
+      <text>开始时间</text>
+      <picker mode="date" value="{{date}}" bindchange="startDateChange">
+         <view class='date_btn'>{{startDate}}</view>
+      </picker>
+      <text>结束时间</text>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="endDateChange">
+         <view class='date_btn'>{{endDate}}</view>
+      </picker>
+    </view>
+    <view class='mode'>
+      <text>打卡方式</text>
+      <view class='mode_btn'>
+        <view class='{{isScan ? "checked" : "unchecked"}}' catchtap='onScan'>扫一扫
+          <image wx:if="{{isScan}}" class='checked_img' src='../../images/selected.png'></image>
+        </view>
+        <view class='{{isMyCode ? "checked" : "unchecked"}}' catchtap='onMyCode'>我二维码
+          <image wx:if="{{isMyCode}}" class='checked_img' src='../../images/selected.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='type'>
+      <text>打卡类型</text>
+      <view class='type_btn'>
+        <view class='{{isClass ? "checked" : "unchecked"}}' catchtap='onClass'>上课考勤
+          <image wx:if="{{isClass}}" class='checked_img' src='../../images/selected.png'></image>
+        </view>
+        <view class='{{isGoOut ? "checked" : "unchecked"}}' catchtap='onGoOut'>临时外出
+          <image wx:if="{{isGoOut}}" class='checked_img' src='../../images/selected.png'></image>
+        </view>
+        <view class='{{isMaterial ? "checked" : "unchecked"}}' catchtap='onMaterial'>领取教材
+          <image wx:if="{{isMaterial}}" class='checked_img' src='../../images/selected.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='submit'>
+      <button catchtap='reset'>重置</button>
+      <button catchtap='screenSubmit'>确定</button>
+    </view>
+  </view>
+</view>

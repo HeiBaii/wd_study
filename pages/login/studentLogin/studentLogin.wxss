@@ -1,0 +1,101 @@
+/* pages/login/studentLogin/studentLogin.wxss */
+button::after {
+  border: none
+}
+/* 改写checkbox */
+checkbox .wx-checkbox-input{
+  border-radius: 11px;
+  height: 20px;
+  width: 20px;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 14px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  height: 28.5px;
+  width: 28px;
+  background-color: #4573ff;
+  color:white;
+  margin-top: -1rpx;
+}
+.login_container{
+  margin-top: 100rpx;
+  color: black;
+  padding: 80rpx;
+}
+.login_title{
+  font-size: 60rpx;
+  font-weight: 600;
+  color: #4c515d;
+}
+.login_form{
+  display: block;
+  margin-top: 95rpx;
+}
+.login_form input{
+  font-size: 32rpx;
+  color: #535d75;
+  width: 100%;
+  border-bottom: 1px solid #e8ecf1;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.login_relation{
+  color: #bec5d4;
+  padding-top:36rpx;
+  padding-bottom: 36rpx;
+  font-size: 28rpx;
+}
+.login_relation text{
+  display: inline;
+  color: #4573ff;
+  text-decoration:underline; 
+}
+.login_signIn{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border: none;
+}
+.login_operation{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42rpx;
+}
+.login_operation navigator{
+  font-size: 28rpx;
+  color: #8890a4;
+}
+.login_Password{
+  position: relative;
+}
+.prd_con{
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  z-index: 99;
+}
+.prd_del{
+  width: 48rpx;
+  height: 48rpx;
+}
+.prd_show{
+  padding-left: 10rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+/* 协议 */
+.agreement{
+  font-size: 26rpx;
+  color: #8d8fa8;
+  margin-top: 400rpx;
+  text-align: center;
+}
+.agreement navigator{
+  display: inline;
+  color: #4573ff;
+}

@@ -1,0 +1,42 @@
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='bg' style='margin-top: {{height + 8}}px'>
+  <view class='detail_box'>
+    <view class='applicant'>
+      <image class='head_portrait' src='../../../images/head_portrait.png'></image>
+      <text class='name'>{{detailData.name}}</text>
+    </view>
+    <view class='content_text'>
+      <text>申请科目：{{detailData.subjectName}}</text>
+      <text>申请班型：{{detailData.classTypeName}}</text>
+      <text>申请附加课班级：{{detailData.eduClassName}}</text>
+      <text>申请时间：{{detailData.applyTime}}</text>
+    </view>
+    <image wx:if="{{detailData.auditStatus==='申请成功'}}" class='state_img' src='../../../images/success.png'></image>
+    <image wx:if="{{detailData.auditStatus==='申请失败'}}" class='state_img' src='../../../images/fail.png'></image>
+    <text wx:if="{{detailData.auditStatus==='申请中'}}"  class='state_text'>{{detailData.auditStatus}}</text>
+  </view>
+  <view class='progress'>
+    <text class='pro_text'>审批进度</text>
+    <view class='con_box con_line'>
+      <view class='con'>
+        <image class='con_img' src='../../../images/head_portrait.png'></image>
+        <text class='con_name'>我 发起审批</text>
+      </view>
+      <text class='con_time'>{{detailData.applyTime}}</text>
+    </view>
+    <view class='con_box auditor'>
+      <view class='con'>
+        <image class='con_img' src='../../../images/teacher_head.png'></image>
+        <text class='con_name' wx:if="{{detailData.auditorName !== null}}">{{detailData.auditorName}}老师</text>
+        <text wx:if='{{detailData.auditStatus === "申请中"}}' class='con_state apply_enter'>等待审批</text>
+        <text wx:if='{{detailData.auditStatus === "申请成功"}}' class='con_state apply_success'>审批通过</text>
+        <text wx:if='{{detailData.auditStatus === "申请失败"}}' class='con_state apply_fail'>审批不通过</text>
+      </view>
+      <text class='con_time' wx:if="{{detailData.auditorTime !== null}}">{{detailData.auditorTime}}</text>
+    </view>
+    <view class='con_reason'>
+      <text class='reason_title' hidden="{{detailData.auditReason == null}}">审核原因：</text>
+      <text class='reason_detail' hidden="{{detailData.auditReason == null}}">{{detailData.auditReason}}</text>
+    </view>
+  </view>
+</view>

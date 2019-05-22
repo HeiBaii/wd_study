@@ -1,0 +1,69 @@
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='bg' style='margin-top: {{height}}px'>
+  <view class='apply_item' wx:for="{{classTypeList}}" wx:key="{{index}}">
+    <text class='apply_subject'>申请科目-{{item.courseCategoryName}}</text>
+    <view class='item_content'>
+      <view class='class_box'>
+        <view class='class_content'>
+          <text>班课班型</text>
+          <text>{{item.classTypeName}}</text>
+        </view>
+        <image class='operation' bindtap='delClassType' data-index="{{index}}" src='../../../images/apply_del.png'></image>
+      </view>
+      <view class='class_box'>
+        <view class='class_content'>
+          <text>附加课班级</text>
+          <text style='color: {{item.additionalClass.eduClassId==""? "#aebac9":""}}'>{{item.additionalClass.eduClassName}}</text>
+        </view>
+        <image hidden="{{item.additionalClass.eduClassId !== ''}}"
+          class='operation'
+          src='../../../images/apply_add.png'
+          data-courseCateGoryId="{{item.courseCategoryId}}"
+          data-classId="{{item.classId}}"
+          data-index="{{index}}"
+          catchtap='getClass'></image>
+        <image hidden="{{item.additionalClass.eduClassId === ''}}"
+          class='operation'
+          src='../../../images/apply_edit.png'
+          data-courseCateGoryId="{{item.courseCategoryId}}"
+          data-classId="{{item.classId}}"
+          data-index="{{index}}"
+          catchtap='getClass'></image>
+      </view>
+    </view>
+    <view class='add_class_bg' hidden='{{!item.classShow}}'>
+      <view class='add_class_box'>
+        <view class='add_class_title'>
+          <view class='title_box'>
+            <image class='title_img' src='../../../images/choice.png'></image>
+            <text class='title_text'>选择附加课班级</text>
+          </view>
+          <image bindtap='closeClass' data-index="{{index}}" class='add_class_close' src='../../../images/choice_close.png'></image>
+        </view>
+        <view class='add_class_con'>
+          <view class='add_class_item {{cell.selected? "selected_text": ""}}'
+            wx:for="{{item.classList}}"
+            wx:for-item="cell"
+            wx:for-index="cellindex"
+            wx:key="{{index}}"
+            data-cellindex="{{cellindex}}"
+            data-index="{{index}}"
+            catchtap="changeClass">
+            <view class='item_text'>
+              <view>{{cell.className}}</view>
+              <text>{{cell.schoolDistrictName}}</text>
+            </view>
+            <image hidden='{{!cell.selected}}' class='item_img' src='../../../images/selected.png'></image>
+          </view>
+          <view class='no_data' hidden='{{item.classList.length !== 0}}'>暂无班级</view>
+        </view>
+        <view class='class_ok' hidden='{{item.classList.length === 0}}'>
+          <view class='btn' catchtap='classOk' data-index="{{index}}">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='btn' bindtap='submit'>提交</view>
+  </view>
+</view>

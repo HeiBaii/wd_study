@@ -1,0 +1,65 @@
+<!--pages/my/my/my.wxml-->
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='container' style='margin-top: {{height}}px'>
+  <view class='my_header'>
+    <image class='head_portrait' src='/images/head_portrait.png'></image>
+    <view class='name_id'>
+      <text>{{userData.name}}</text>
+      <text>ID:{{userData.id}}</text>
+    </view>
+    <view class='countdown'>
+      <text>{{year}}年考研倒计时</text>
+      <text class='count'>{{day}} 天 {{hour}} 时</text>
+      <view class='student_type'>
+        <image class='vip' src='/images/vip.png'></image>
+        <text class='vip_text'>高端学员</text>
+      </view>
+    </view>
+  </view>
+  <view class='binding_box'>
+    <view class='binding_item'>
+      <view class='item_left'>
+        <image src='/images/phone.png'></image>
+        <view class='item_text'>
+          <text>手机号:{{userData.mobile}}</text>
+          <text>提示：一年内最多申请修改3次</text>
+        </view>
+      </view>
+      <navigator hover-class="none" class='item_right'>
+        <text>更换</text>
+        <image src='/images/go_detail.png'></image>
+      </navigator>
+    </view>
+    <view class='binding_item'>
+      <view class='item_left'>
+        <image src='/images/wx.png'></image>
+        <view class='item_text'>
+          <text>微信号:ALICE2344</text>
+          <text>解绑将影响账号正常使用，请谨慎操作！</text>
+        </view>
+      </view>
+      <navigator hover-class="none" class='item_right'>
+        <text>解绑</text>
+        <image src='/images/go_detail.png'></image>
+      </navigator>
+    </view>
+  </view>
+  <view class='revise_box'>
+    <navigator hover-class="none" class='revise_item'>
+      <view class='revise_left'>
+        <image src='/images/password.png'></image>
+        <text>修改密码</text>
+      </view>
+      <image class='revise_right' src='/images/go_detail.png'></image>
+    </navigator>
+    <view class='center_line'></view>
+    <navigator hover-class="none" class='revise_item'>
+      <view class='revise_left'>
+        <image src='/images/exit.png'></image>
+        <text>退出</text>
+      </view>
+      <image class='revise_right' src='/images/go_detail.png'></image>
+    </navigator>
+  </view>
+</view>

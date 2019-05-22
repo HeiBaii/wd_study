@@ -1,0 +1,71 @@
+<!--pages/info/indexInfo/indexInfo.wxml-->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='home_page' style='margin-top: {{height}}px'>
+  <view class='item_info' catchtap="attendDetail">
+    <image class='item_img' src='../../../images/info_icon/icon_pinglun.png'></image>
+    <view class='item_con'>
+      <view class='item_text'>
+        <view>上课提醒</view>
+        <text wx:if="{{!attend}}">暂无消息</text>
+      </view>
+      <view class='item_detail'>
+        <text class='item_num' wx:if="{{attend>0}}">{{attend}}</text>
+        <image class='item_go' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_jiaowu.png'></image>
+    <view class='item_con'>
+      <view class='item_text'>
+        <view>审核通知</view>
+        <text wx:if="{{!apply}}">暂无消息</text>
+      </view>
+      <view class='item_detail'>
+        <text class='item_num'wx:if="{{apply}}">{{apply}}</text>
+        <image class='item_go' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_xiaoxi.png'></image>
+    <view class='item_con'>
+      <view class='item_text'>
+        <view>消息提醒</view>
+        <text wx:if="{{news}}">你有新的消息</text>
+        <text wx:if="{{!news}}">暂无消息</text>
+      </view>
+      <view class='item_detail'>
+        <text class='item_num' wx:if="{{news}}">{{news}}</text>
+        <image class='item_go' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_daiban.png'></image>
+    <view class='item_con'>
+      <view class='item_text'>
+        <view>待办评价</view>
+        <text wx:if="{{!evaluate}}">暂无消息</text>
+      </view>
+      <view class='item_detail'>
+        <text class='item_num' wx:if="{{evaluate}}">{{evaluate}}</text>
+        <image class='item_go' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='item_info'>
+    <image class='item_img' src='../../../images/info_icon/icon_pinjia.png'></image>
+    <view class='item_con'>
+      <view class='item_text'>
+        <view>评价回复</view>
+        <text wx:if="{{!evaluateWord}}">暂无消息</text>
+        <text wx:if="{{evaluateWord}}"><text class='item_teacher'>李国强</text>老师回复了你的评价留言</text>
+      </view>
+      <view class='item_detail'>
+        <text class='item_num' wx:if="{{evaluateWord}}">{{evaluateWord}}</text>
+        <image class='item_go' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+/* pages/qrcode/qrcode.wxss */
+page{
+  background-color: #4573ff;
+}
+.qrcode_bg{
+  width: 100%;
+  text-align: center;
+  padding-top: 100rpx;
+}
+.card_box{
+  padding: 40rpx 40rpx;
+  width: 75%;
+  height: 870rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  position: relative;
+}
+.card_box::after, .card_box::before{
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #4573ff;
+  border-radius: 20rpx;
+  position: absolute;
+}
+.card_box::after{
+  left: -20rpx;
+  top: 340rpx;
+}
+.card_box::before{
+  right: -20rpx;
+  top: 340rpx;
+}
+.name_photo{
+  display: flex;
+  padding:0 26rpx;
+  justify-content: space-between;
+}
+.name_sex{
+  padding-top: 40rpx;
+}
+.name_sex text:first-child {
+  font-size: 48rpx;
+  color: #4c515d;
+  font-weight: 600%;
+  line-height: 80rpx;
+}
+.name_sex text:last-child {
+  display: block;
+  font-size: 32rpx;
+  color:#8890a4;
+}
+.card_img {
+  width: 200rpx;
+  height: 280rpx;
+  border-radius: 20rpx;
+}
+.center_line{
+  width: 100%;
+  border-bottom: 0.5rpx dashed #cfd6df;
+  padding-top: 40rpx;
+}
+.qrcode{
+  width: 400rpx;
+  height: 400rpx;
+  padding-top: 50rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.card_tips{
+  padding-top: 30rpx;
+  line-height: 28rpx;
+}
+.card_tips .tishi{
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+}
+.card_tips text{
+  font-size: 28rpx;
+  color: #8890a4;
+  text-align: center;
+  line-height: 28rpx;
+  padding-left: 10rpx;
+}
+.footer_tips{
+  padding-top: 20rpx;
+}
+.footer_tips text{
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}

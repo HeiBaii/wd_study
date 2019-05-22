@@ -1,0 +1,21 @@
+<!--pages/login/studentLogin.wxml-->
+<view class='login_container'>
+  <text class='login_title'>学员登录</text>
+  <form class='login_form'>
+    <input class='login_userName' bindinput='inputUserName' placeholder='请输入学员号/手机号' placeholder-style='color:#bec5d4;' value='{{userForm.userName}}'></input>
+    <input class='login_Password' bindinput='inputPassword' placeholder='请输入密码' value='{{userForm.password}}' placeholder-style='color:#bec5d4;' password='{{prdShow}}'>
+      <view class='prd_con'>
+        <image catchtap='emptyPrd' class='prd_del' src='{{delShow?"/images/del.png":""}}'></image>
+        <image catchtap='isPrdShow' class='prd_show' src='{{prdShow?"/images/biyan.png":"/images/zhengyan.png"}}'></image>
+      </view>
+    </input>
+    
+    <checkbox color='#4573ff' checked='true' class='login_relation'>关联微信号“<text>ALLICE1233</text>”</checkbox>
+  </form>
+  <button class='login_signIn' catchtap='loginBtn' disabled='{{!btnColor}}' style='background-color:{{btnColor? "#4573ff":"#cbd6e4"}}'>登录</button>
+  <view class='login_operation'>
+    <navigator hover-class='none'>忘记密码</navigator>
+    <navigator hover-class='none' url='/pages/login/codeLogin/codeLogin'>验证码登录</navigator>
+  </view>
+  <view class='agreement'>我已仔细阅读并同意 <navigator url='https://www.wendu.com/index.php?m=content&c=index&a=show&catid=884&id=497'>隐私保护政策</navigator></view>
+</view>

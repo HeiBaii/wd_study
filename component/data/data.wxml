@@ -1,0 +1,24 @@
+<!--component/data/data.wxml-->
+<view class='wrap' bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+  <view>
+    <view class='date-show'>
+        {{year}}年{{month}}月
+  </view>
+  </view>
+    <view class='header'>
+      <view wx:for='{{date}}' wx:key='index' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}                
+        <view></view>
+      </view>
+    </view>
+    <view class='date-box'>
+      <view wx:for='{{dateArr}}' wx:key='index' class='{{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}'>          
+        <view class='date-head'>
+          <view catchtap='dateClick'>{{item.dateNum}}</view>
+          <!-- 课程点 -->
+          <view class='curriculum'>
+            <view style='background-color:#10d4ce;'></view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

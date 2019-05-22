@@ -1,0 +1,28 @@
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='qrcode_bg' style='margin-top: {{height}}px'>
+  <view class='noData_bg' wx:if="{{additionalList.length === 0}}">
+    <image class='noData_img' src='../../../images/no_data.png'></image>
+  </view>
+  <view class='item_bg' wx:if="{{addadditionalList.length !== 0}}">
+    <view class='item_container' wx:for="{{additionalList}}" wx:key="{{index}}" catchtap='go_detail' data-id="{{item.id}}" data-additionalClassId="{{item.additionalClassId}}">
+      <view class='subject_state'>
+        <text class='subject'>{{item.subjectName}}</text>
+        <text class='state'style="color:#4c78fd;" wx:if="{{item.auditStatus === '申请中'}}">{{item.auditStatus}}</text>
+        <text class='state'style="color:#00c834;" wx:if="{{item.auditStatus === '申请成功'}}">{{item.auditStatus}}</text>
+        <text class='state'style="color:#fa464a;" wx:if="{{item.auditStatus === '申请失败'}}">{{item.auditStatus}}</text>
+      </view>
+      <view class='item_con'>
+        <view class='item_text'>
+          <text>申请班型：{{item.classTypeName}}</text>
+          <text>附加课班级：{{item.eduClassName}}</text>
+          <text class='item_time'>{{item.applyTime}}</text>
+        </view>
+        <image class='go_detail' src='../../../images/go_detail.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='btn' bindtap='applyAdditional'>申请附加课</view>
+  </view>
+</view>

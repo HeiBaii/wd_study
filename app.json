@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/studentLogin/studentLogin",
+    "pages/login/codeLogin/codeLogin",
+    "pages/qrcode/qrcode",
+    "component/data/data",
+    "pages/timeTable/timeTable",
+    "component/slide/slide",
+    "pages/my/my/my",
+    "pages/login/agreement/agreement",
+    "pages/my/revisePhone/revisePhone",
+    "pages/info/indexInfo/indexInfo",
+    "pages/info/classInfo/classInfo",
+    "pages/info/examineInfo/examineInfo",
+    "pages/info/infoRemind/infoRemind",
+    "pages/info/daibanInfo/daibanInfo",
+    "pages/info/evaluationReply/evaluationReply",
+    "pages/codeRecord/codeRecord",
+    "pages/additionalClass/additionalList/additionalList",
+    "pages/additionalClass/additionalDetail/additionalDetail",
+    "pages/additionalClass/applyAdditional/applyAdditional",
+    "pages/additionalClass/submitApply/submitApply",
+    "pages/leaveApply/leaveList/leaveList",
+    "pages/404/404"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#6c7581",
+    "selectedColor": "#4573ff",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/footer_icon/home_no.png",
+        "selectedIconPath": "/images/footer_icon/home.png"
+      },
+      {
+        "pagePath": "pages/info/indexInfo/indexInfo",
+        "text": "消息",
+        "iconPath": "/images/footer_icon/info_no.png",
+        "selectedIconPath": "/images/footer_icon/info.png"
+      },
+      {
+        "pagePath": "pages/my/my/my",
+        "text": "我的",
+        "iconPath": "/images/footer_icon/my_no.png",
+        "selectedIconPath": "/images/footer_icon/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

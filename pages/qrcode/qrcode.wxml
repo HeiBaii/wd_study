@@ -1,0 +1,24 @@
+<!--pages/qrcode/qrcode.wxml-->
+<!-- 引入自定义组价。'navbarData'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<navbar navbar-data='{{nvabarData}}'></navbar>
+<view class='qrcode_bg' style='margin-top: {{height}}px'>
+  <view class='card_box'>
+    <view class='name_photo'>
+      <view class='name_sex'>
+        <text>{{codeInfo.name}}</text>
+        <text>女</text>
+      </view>
+      <image class='card_img' src='/images/photo.png'></image>
+    </view>
+    <view class='center_line'></view>
+    <image class='qrcode' src='{{codeInfo.qrcode}}'></image>
+    <view class='card_tips'>
+      <image class='tishi' src='/images/tishiwen.png'></image>
+      <text>该二维码5分钟内有效，重新进入将更新</text>
+    </view>
+  </view>
+  <view class='footer_tips'>
+    <text>请出示此二维码给教务人员</text>
+    <text>扫码考勤/邻教材</text>
+  </view>
+</view>
